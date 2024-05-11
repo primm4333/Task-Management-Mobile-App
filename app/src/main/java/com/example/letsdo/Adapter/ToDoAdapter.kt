@@ -17,9 +17,7 @@ class ToDoAdapter(private val db: DatabaseHandler, private val activity: MainAct
     RecyclerView.Adapter<ToDoAdapter.ViewHolder>() {
 
     val context: Context
-        get() {
-            TODO()
-        }
+        get() = activity
     private var todoList: List<ToDoModel> = emptyList()
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
