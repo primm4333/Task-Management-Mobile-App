@@ -55,7 +55,7 @@ class AddNewTask : BottomSheetDialogFragment() {
             val task = bundle.getString("task")
             newTaskText.setText(task)
             if (!task.isNullOrEmpty()) {
-                newTaskSaveButton.setTextColor(ContextCompat.getColor(requireContext(), R.color.colorPrimaryDark))
+                newTaskSaveButton.setTextColor(ContextCompat.getColor(requireContext(), R.color.colorPrimary))
             }
         }
 

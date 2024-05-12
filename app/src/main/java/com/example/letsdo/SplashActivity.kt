@@ -2,19 +2,19 @@ package com.example.letsdo
 
 import android.content.Intent
 import android.os.Bundle
-import android.os.Handler
 import androidx.appcompat.app.AppCompatActivity
-
+import android.view.View
 
 class SplashActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_splash)
-        supportActionBar!!.hide()
-        val i = Intent(this@SplashActivity, MainActivity::class.java)
-        Handler().postDelayed({
-            startActivity(i)
+        supportActionBar?.hide()
+
+        val rootView = findViewById<View>(android.R.id.content)
+        rootView.setOnClickListener {
+            startActivity(Intent(this@SplashActivity, MainActivity::class.java))
             finish()
-        }, 2000)
+        }
     }
 }
